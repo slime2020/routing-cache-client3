@@ -9,8 +9,8 @@ const routes: Routes = [
   {
     path: 'login',
     // loadChildren: './modules/login/login.module#LoginModule'
-    // component: MainComponent
-    loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
+    component: MainComponent
+    // loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
   },
   {
     path: '',

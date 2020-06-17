@@ -4,14 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { Group23page1Component } from '../../components/group23page1/group23page1.component';
 import { Group23page2Component } from '../../components/group23page2/group23page2.component';
 import { Group23page3Component } from '../../components/group23page3/group23page3.component';
-// import { Group1page1Component } from '../../components/group1page1/group1page1.component';
+import { Group1page1Component } from '../../components/group1page1/group1page1.component';
 
 const routes: Routes = [
   {
     path: 'g1',
     // loadChildren: './modules/group1/group1.module#Group1Module'
-    // component: Group1page1Component
-    loadChildren: () => import('../../modules/group1/group1.module').then(m => m.Group1Module)
+    component: Group1page1Component
+    // loadChildren: () => import('../../modules/group1/group1.module').then(m => m.Group1Module)
   },
   {
     path: 'p1',
