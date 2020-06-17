@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'routing-cache-client3'`, () => {
+  it(`should have as title 'routing-cache-client'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('routing-cache-client3');
+    expect(app.title).toEqual('routing-cache-client');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('routing-cache-client3 app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('routing-cache-client app is running!');
   });
 });
