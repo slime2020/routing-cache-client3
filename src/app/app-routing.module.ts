@@ -21,11 +21,13 @@ const routes: Routes = [
       },
       {
         path: 'g12',
-        loadChildren: './modules/group12/group12.module#Group12Module'
+        // loadChildren: './modules/group12/group12.module#Group12Module'
+        loadChildren: () => import('./modules/group12/group12.module').then(m => m.Group12Module)
       },
       {
         path: 'setting',
-        loadChildren: './modules/group34/group34.module#Group34Module'
+        // loadChildren: './modules/group34/group34.module#Group34Module'
+        loadChildren: () => import('./modules/group34/group34.module').then(m => m.Group34Module)
         // children: [
         //   {
         //     path: 'g1',
@@ -39,7 +41,8 @@ const routes: Routes = [
       },
       {
         path: 'g23',
-        loadChildren: './modules/group23/group23.module#Group23Module'
+        // loadChildren: './modules/group23/group23.module#Group23Module'
+        loadChildren: () => import('./modules/group23/group23.module').then(m => m.Group23Module)
       }
     ]
   },
@@ -48,6 +51,11 @@ const routes: Routes = [
   //   component: OopsComponent,
   //   pathMatch: 'full'
   // }
+  // {
+  //   path: '',
+  //   redirectTo: '',
+  //   pathMatch: 'full'
+  // },
   {
     path: '**',
     redirectTo: '/',
