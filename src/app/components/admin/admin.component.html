@@ -1,0 +1,26 @@
+<div class="header">
+  <p>admin works!</p>
+  <div class="routers">
+    <button mat-button color="primary" (click)="goto('/setting/p1')">setting/p1</button>
+    <button mat-button color="primary" (click)="goto('/setting/p2')">setting/p2</button>
+    <button mat-button color="primary" (click)="goto('/setting/p3')">setting/p3</button>
+    <button mat-button color="primary" (click)="goto('/setting/g1')">setting/g1</button>
+    <p></p>
+    <button mat-button color="primary" (click)="goto('/g12/aaa')">group 12, page a</button>
+    <button mat-button color="primary" (click)="goto('/g12/bbbb')">group 12, page b</button>
+    <button mat-button color="primary" (click)="goto('/g12/ccccc')">group 12, page c</button>
+    <button mat-button color="warn" (click)="goto('/g12/d')">group 12, page d (did not exist)</button>
+    <p></p>
+    <input type="checkbox"> save me
+    <p></p>
+    <button mat-button color="primary" (click)="logout()">Logout</button>
+
+    <button mat-button color="primary" (click)="logout401()">Error 401 - go to login again.</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="outlet">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<p>login main works! this is not login component.</p>
+
+<p>Please input</p>
+<p>Username: oooooooo</p>
+<p>Password: xxxxxxxx</p>
+
+<p></p>
+
+<button *ngIf="!is401()" mat-button color="primary" (click)="login()">login</button>
+
+<button *ngIf="is401()" mat-button color="primary" (click)="login401()">Login again after error 401</button>
+
+<p></p>
+
+<input type="checkbox"> click me a
+<BR />
+<input type="checkbox"> click me b
+<BR />
+<input type="checkbox"> click me c
