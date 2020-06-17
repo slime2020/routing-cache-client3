@@ -3,13 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
 import { MainComponent } from './components/login/main/main.component';
-import { OopsComponent } from './components/oops/oops.component';
+// import { OopsComponent } from './components/oops/oops.component';
 
 const routes: Routes = [
   {
     path: 'login',
     // loadChildren: './modules/login/login.module#LoginModule'
-    component: MainComponent
+    // component: MainComponent
+    loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
   },
   {
     path: '',
